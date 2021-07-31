@@ -13,8 +13,7 @@
     "downlevelIteration": true,
     "paths": {
       "my-lib": [
-        "dist/my-lib/my-lib",
-        "dist/my-lib"
+        "projects/my-lib/src/public-api.ts"
       ]
     },
     "experimentalDecorators": true,

@@ -9,8 +9,8 @@
     "components": [
         {
             "name": "Button",
-            "id": "component-Button-b494e3cc901ecd04f4d3669d44878784",
-            "file": "projects/my-lib/src/lib/button.component.ts",
+            "id": "component-Button-3a8103c04e443641788be56af5bb59b5",
+            "file": "projects/my-lib/src/lib/button.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -21,8 +21,9 @@
                 "./button.scss"
             ],
             "styles": [],
-            "template": "<button {{type}}>\n  {{ title }}\n</button>\n",
-            "templateUrl": [],
+            "templateUrl": [
+                "./buttom.html"
+            ],
             "viewProviders": [],
             "inputsClass": [
                 {
@@ -32,7 +33,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Button text to be displayed.",
                     "description": "<p>Button text to be displayed.</p>\n",
-                    "line": 17,
+                    "line": 13,
                     "type": "string"
                 },
                 {
@@ -40,9 +41,9 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "Type of the button: `primary` | `secondary`",
-                    "description": "<p>Type of the button: <code>primary</code> | <code>secondary</code></p>\n",
-                    "line": 23,
+                    "rawdescription": "Type of the button: `primary` | `secondary`.",
+                    "description": "<p>Type of the button: <code>primary</code> | <code>secondary</code>.</p>\n",
+                    "line": 19,
                     "type": "\"primary\" | \"secondary\""
                 }
             ],
@@ -55,7 +56,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -67,7 +68,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'my-button',\n  template: `\n    <button {{type}}>\n      {{ title }}\n    </button>\n  `,\n  styleUrls: ['./button.scss'],\n})\nexport class Button implements OnInit {\n  /**\n   * Button text to be displayed.\n   */\n  @Input()\n  title: string = 'Default';\n\n  /**\n   * Type of the button: `primary` | `secondary`\n   */\n  @Input()\n  type: 'primary' | 'secondary' = 'primary';\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'my-button',\n  templateUrl: './buttom.html',\n  styleUrls: ['./button.scss'],\n})\nexport class Button implements OnInit {\n  /**\n   * Button text to be displayed.\n   */\n  @Input()\n  title: string = 'Default';\n\n  /**\n   * Type of the button: `primary` | `secondary`.\n   */\n  @Input()\n  type: 'primary' | 'secondary' = 'primary';\n\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -82,23 +83,24 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 23
+                "line": 19
             },
             "implements": [
                 "OnInit"
-            ]
+            ],
+            "templateData": "<button [className]=\"type === 'primary' ? 'primary': 'secondary'\">\n  {{title}}\n</button>\n"
         }
     ],
     "modules": [
         {
             "name": "MyLibModule",
-            "id": "module-MyLibModule-5d18fb7aa43fbe6d745ca39859e4972e",
+            "id": "module-MyLibModule-c21c3e29634bdd82b3ff75c4ca3de277",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/my-lib/src/lib/button.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { Button } from './button.component';\n\n@NgModule({\n  declarations: [Button],\n  imports: [],\n  exports: [Button],\n})\nexport class MyLibModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { Button } from './button';\n\n@NgModule({\n  declarations: [Button],\n  imports: [],\n  exports: [Button],\n})\nexport class MyLibModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -235,7 +237,7 @@
         "status": "low",
         "files": [
             {
-                "filePath": "projects/my-lib/src/lib/button.component.ts",
+                "filePath": "projects/my-lib/src/lib/button.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "Button",
