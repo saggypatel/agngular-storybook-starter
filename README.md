@@ -1,6 +1,6 @@
 # NG-Storybook
 
-This project is storybook + angular library stater. It fixes the problem of loading global styles into storybook. Please note that this project uses the beta version of storybook (6.4.0-alpha.22).
+This project is storybook + angular library starter. It fixes the problem of loading global styles into storybook. This project uses the beta version of storybook (6.4.0-alpha.22).
 
 ## Development server
 
