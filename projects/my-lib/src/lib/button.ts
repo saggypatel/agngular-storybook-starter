@@ -2,14 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-button',
-  template: `
-    <button {{type}}>
-      {{ title }}
-    </button>
-  `,
+  templateUrl: './buttom.html',
   styleUrls: ['./button.scss'],
 })
-export class MyLibComponent implements OnInit {
+export class Button implements OnInit {
   /**
    * Button text to be displayed.
    */
@@ -17,7 +13,7 @@ export class MyLibComponent implements OnInit {
   title: string = 'Default';
 
   /**
-   * Type of the button: `primary` | `secondary`
+   * Type of the button: `primary` | `secondary`.
    */
   @Input()
   type: 'primary' | 'secondary' = 'primary';

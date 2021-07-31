@@ -1,10 +1,10 @@
 @import "variables";
 
 button {
-  &[primary] {
+  &.primary {
     background-color: $primary-color;
   }
-  &[secondary] {
+  &.secondary {
     background-color: $secondary-color;
   }
 }
