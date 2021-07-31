@@ -1,6 +1,7 @@
 @import "variables";
 
 button {
+  color: #fff;
   &.primary {
     background-color: $primary-color;
   }
