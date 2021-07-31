@@ -11,6 +11,12 @@
     "build-storybook": "npm run docs:json && build-storybook"
   },
   "private": true,
+  "keywords": [
+    "angular",
+    "angular 12",
+    "storybook",
+    "global styles"
+  ],
   "dependencies": {
     "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",
